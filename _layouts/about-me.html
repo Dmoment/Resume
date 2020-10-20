@@ -1,0 +1,233 @@
+
+<!doctype html>
+<html>
+  <head>
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.1.7/css/fork-awesome.min.css" integrity="sha256-gsmEoJAws/Kd3CjuOQzLie5Q3yshhvmo7YNtBG7aaEY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    <br>
+    <div class="col-lg-12">
+    <div class="row">
+        <div class="col-lg-4 offset-md-1">
+            <div class="card" id="profile-card" >
+              <img src="assets/images/img_avatar.png" alt="Avatar" style="width:100%" class="profileimg">
+              <div class="container">
+                <h4 class="profile-name"><b>{{site.data.credentials.name}}</b></h4> 
+                <p class="profile-bio">{{site.data.credentials.designation}}</p>
+                
+                {%- include github_follow_button.html -%}
+                <p class="profile-links">
+                  
+                  <a
+                    class="social-link"
+                    href="http://twitter.com/{{ site.data.credentials.twitter_username }}"
+                  >
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a
+                  class="social-link"
+                  href="http://instagram.com/{{ site.data.credentials.instagram_username }}"
+                >
+                  <i class="fa fa-instagram"></i>
+                </a>
+                <a
+                class="social-link"
+                href="https://www.linkedin.com/in/{{ site.data.credentials.linkedin_username }}"
+              >
+                <i class="fa fa-linkedin"></i>
+              </a>
+              <a
+                class="social-link"
+                href="https://www.medium.com/{{ site.data.credentials.medium_username }}"
+              >
+                <i class="fa fa-medium"></i>
+              </a>
+              <a
+                class="social-link"
+                href="https://www.github.com/{{ site.data.credentials.github_username }}"
+              >
+                <i class="fa fa-github"></i>
+                <a
+                class="social-link"
+                href="https://www.dev.to/{{ site.data.credentials.dev_username }}"
+              >
+                <i class="fa fa-dev-to" aria-hidden="true"></i>
+              </a>
+                </p>
+                <h6><i class="fas fa-map-marker-alt"></i> {{ site.data.credentials.author_location }}</h6>
+                <h6><i class="fas fa-envelope"></i> {{ site.data.credentials.author_email }}</h6>
+              </div>
+              
+            </div>
+            <br>
+            <div class="card">
+              <h1>Skills</h1>
+        
+              {%- include author_skills.html -%}
+            </div>
+            <br>
+            <div class="card">
+              <h1>Coding Activity</h1>
+        
+              {%- include coding_activity.html -%}
+            </div>
+            
+        </div>
+        <div class="col-lg-7">
+              
+          <div class="card">
+            <h1 class="card-title">About</h1>
+            <p class="author-bio">{{ site.data.author_bio.author_bio }}</p>
+          </div>
+          <br />
+          <div id="author_projects" class="card">
+            <h1 class="card-title">Projects</h1>
+            <br />
+            
+            <div class="row" id="project-card">
+             
+              <div class="col-md-6">
+                <div class="hover01 column">
+                  <figure>
+                <img
+                  src="assets/images/Messege_me.png"
+                  class="project-img"
+                /></figure>
+              </div>
+              </div>
+              
+              <div class="col-md-4 center">
+                
+                <h4 class="experience-title"> Real time Chatroom</h4>
+                
+                <h6 class="experience-info">Made a real time chatroom app to learn about basic use of Action cable in rails.</h6>
+                <p class="experience-desc">Project 3</p>
+                <p>
+                  <a class="project-link" href="#"
+                    >Project url</a
+                  >
+                </p>
+              </div>
+              <div class="col-md-6">
+                <div class="hover01 column">
+                  <figure>
+                <img
+                  src="assets/images/finance-tracker.png"
+                  class="project-img"
+                /></figure>
+              </div>
+              </div>
+              
+              <div class="col-md-4 center">
+                
+                <h4 class="experience-title"> Real time Chatroom</h4>
+                
+                <h6 class="experience-info">Made a real time chatroom app to learn about basic use of Action cable in rails.</h6>
+                <p class="experience-desc">Project 3</p>
+                <p>
+                  <a class="project-link" href="#"
+                    >Project url</a
+                  >
+                </p>
+              </div>
+              <div class="col-md-6">
+                <div class="hover01 column">
+                  <figure>
+                <img
+                  src="assets/images/railsreact.png"
+                  class="project-img"
+                /></figure>
+              </div>
+              </div>
+              
+              <div class="col-md-4 center">
+                
+                <h4 class="experience-title"> Real time Chatroom</h4>
+                
+                <h6 class="experience-info">Made a real time chatroom app to learn about basic use of Action cable in rails.</h6>
+                <p class="experience-desc">Project 3</p>
+                <p>
+                  <a class="project-link" href="#"
+                    >Project url</a
+                  >
+                </p>
+              </div>
+              <div class="col-md-6">
+                <div class="hover01 column">
+                  <figure>
+                <img
+                  src="assets/images/Messege_me.png"
+                  class="project-img"
+                /></figure>
+              </div>
+              </div>
+              
+              <div class="col-md-4 center">
+                
+                <h4 class="experience-title"> Real time Chatroom</h4>
+                
+                <h6 class="experience-info">Made a real time chatroom app to learn about basic use of Action cable in rails.</h6>
+                <p class="experience-desc">Project 3</p>
+                <p>
+                  <a class="project-link" href="#"
+                    >Project url</a
+                  >
+                </p>
+              </div>
+              
+            </div>
+
+            
+    </div>
+    <br/>
+    <div class="card">
+      <h1 class="card-title">Work Experience</h1>
+      <br />
+      
+      <div class="row">
+        <div class="col-md-2">
+          <img
+            src="assets/images/company.jpeg"
+            class="company-logo"
+          />
+        </div>
+        <div class="col-md-6">
+          <h4 class="experience-title">System Engineer</h4>
+          <h6 class="experience-info">Worked on .Net framework</h6>
+          <h6 class="experience-info">Worked on a self management app</h6>
+        </div>
+      </div>
+      
+      
+    </div>
+    <br/>
+    <div class="card">
+      <h1 class="card-title">Education</h1>
+      <br />
+      
+      <div class="row">
+        <div class="col-md-2">
+          <img
+            src="#"
+            class="company-logo"
+          />
+        </div>
+        <div class="col-md-6">
+          <h5 class="experience-title">Did Bachelor in Technology from PSIT Kanpur</h4>
+          <h6 class="experience-info">For my final year project I made an app called my_butler and also made quadcopter from scratch for fun.</h6>
+          <p class="experience-desc"></p>
+          <p><a href="#"></a></p>
+        </div>
+      </div>
+  </div>
+  </body>
+</html>
