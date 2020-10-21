@@ -98,7 +98,7 @@
   
   
 }
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h5{
   color: var(--bold-color) !important;
   line-height: 1.1;
 }
@@ -194,3 +194,52 @@ h1, h2, h3, h4, h5, h6 {
 .tag-low:hover::after {
    border-left-color: #50BFE6; 
 }
+
+.project-link,.project-link:visited,.project-link:hover,.project-link:active{
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+	position:relative;
+  transition:0.5s color ease;
+	text-decoration:none;
+	color:#81b3d2;
+	font-size:1.5em;
+}
+.project-link:hover{
+	color:#d73444;
+}
+.project-link.before:before,.project-link.after:after{
+  content: "";
+  transition:0.5s all ease;
+  -webkit-backface-visibility:hidden;
+          backface-visibility:hidden;
+  position:absolute;
+}
+.project-link.before:before{
+  top:-0.25em;
+}
+.project-link.after:after{
+  bottom:-0.25em;
+}
+.project-link.before:before,.project-link.after:after{
+  height:5px;
+  height:0.35rem;
+  width:0;
+  background:#d73444;
+}
+.project-link.first:after{
+  left:0;
+}
+
+.wrapper{
+  margin:3em 0;
+}
+
+hr.solid {
+  border-top: 3px solid black;
+}
+
+h6.project-info{
+  color: #805533;
+  
+}
+
